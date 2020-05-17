@@ -17,11 +17,11 @@
     <p><a href="https://matematykawpodstawowce.pl/" target="_blank">strona 5 </a></p>
     <p><a href="https://www.squla.pl/jezyk-polski" target="_blank">strona 6 </a></p>
 </div>
-<div id="obl" style="background-color: white">
-    <h1 id="obliczenia" style="position: absolute; left: 45%; top: 50%"></h1>
-    <input id="wynik" style="position: absolute; left: 53%; top: 53%; display: none" placeholder="wynik">
-    <button id="next" style="display: none; position: absolute; left: 53%; top: 57%">sprawć</button>
-    <button id="ready" style="display: none; position: absolute; left: 57%; top: 57%">koniec</button>
+<div id="obl" style="background-color: white; display: none; position: absolute; left: 50%; top:50%; transform: translateX(-50%); padding: 30px;">
+    <h1 id="obliczenia"></h1>
+    <input id="wynik" placeholder="wynik">
+    <button id="next" >sprawć</button>
+    <button id="ready">koniec</button>
 </div>
 
 <div id="prod" style="display: none">
@@ -30,6 +30,7 @@
 <button id="quiz" style="width: 100px; height: 50px">quiz</button>
 <button id="napisz" style="width: 100px; height: 50px">napisz do mnie</button>
 <script>
+    const obl= document.getElementById("obl");
     const zalogujj = document.getElementById("zaloguj");
     const logo = document.getElementById("logo");
     const prod = document.getElementById("prod");
@@ -47,6 +48,7 @@ logo.addEventListener("click", () => {
     let input = document.getElementById("kodpani").value;
     if (input==="123213"){
     prod.style.display="";
+    document.body.style.backgroundColor="green"
     }
 });
     jakat.addEventListener("click", () => {
@@ -61,11 +63,7 @@ logo.addEventListener("click", () => {
        a =  Math.round(Math.random() *500);
         b = Math.round(Math.random() *500);
         obliczenia.innerText= "" + a + "+" + "" + b + "=";
-        wynik.style.display="";
-        ready.style.display="";
-        wynik.style.display="";
-        quiz.style.display="none";
-        next.style.display="";
+       obl.style.display="";
         document.getElementById("wynik").value="";
     }
     quiz.addEventListener("click",  () => {
@@ -83,11 +81,7 @@ logo.addEventListener("click", () => {
     });
 
     ready.addEventListener("click", () => {
-       wynik.style.display="none";
-       ready.style.display="none";
-       quiz.style.display="";
-       obliczenia.innerText="";
-       next.style.display="none";
+        obl.style.display="none";
     });
     napisz.addEventListener("click", () => {
        window.open("https://github.com/SjomaNikitin/SjomaNikitin.github.io/issues/", "_blank")
