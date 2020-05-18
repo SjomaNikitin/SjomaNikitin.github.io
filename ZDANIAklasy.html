@@ -10,12 +10,12 @@
 <button id="logo" style="position: absolute; right: 0%; top: 50px">Zaloguj</button>
 <div style="background-color: white; width: 100px">
     <p>strony dla klasy 3b</p>
-    <p><a href="https://www.matzoo.pl/" target="_blank">strona 1 </a></p>
-    <p><a href="http://pisupisu.pl/" target="_blank">strona 2 </a></p>
-    <p><a href="https://www.dyktanda.net/" target="_blank">strona 3 </a></p>
-    <p><a href="https://matmag.pl/" target="_blank">strona 4 </a></p>
-    <p><a href="https://matematykawpodstawowce.pl/" target="_blank">strona 5 </a></p>
-    <p><a href="https://www.squla.pl/jezyk-polski" target="_blank">strona 6 </a></p>
+    <p><a href="https://www.matzoo.pl/" target="_blank">strona 1 matzoo</a></p>
+    <p><a href="http://pisupisu.pl/" target="_blank">strona 2 pisupisu</a></p>
+    <p><a href="https://www.dyktanda.net/" target="_blank">strona 3 dyktanda</a></p>
+    <p><a href="https://matmag.pl/" target="_blank">strona 4 matmag</a></p>
+    <p><a href="https://matematykawpodstawowce.pl/" target="_blank">strona 5 matematyka...</a></p>
+    <p><a href="https://www.squla.pl/jezyk-polski" target="_blank">strona 6 squla</a></p>
 </div>
 <div id="obl" style="background-color: white; display: none; position: absolute; left: 50%; top:50%; transform: translateX(-50%); padding: 30px;">
     <h1 id="obliczenia"></h1>
@@ -24,8 +24,9 @@
     <button id="ready">koniec</button>
 </div>
 
-<div id="prod" style="display: none">
-    <button id="jakat" style="width: 200px; height: 50px; background-color: darkcyan; position: absolute; top:  95%; left: 45%">Jaka to strona?</button>
+<div id="prod" style="display: none; position: absolute; top:  95%; left: 45%">
+    <button id="jakat" style="width: 200px; height: 50px; background-color: darkcyan; ">Jaka to strona?</button>
+        <button id="czat" style="width: 200px; height: 50px; background-color: darkcyan">czat</button>
 </div>
 <button id="quiz" style="width: 100px; height: 50px">quiz</button>
 <button id="napisz" style="width: 100px; height: 50px">napisz do mnie</button>
@@ -41,6 +42,7 @@
     const ready = document.getElementById("ready");
     const next = document.getElementById("next");
     const napisz = document.getElementById("napisz");
+    const czat = document.getElementById("czat");
     let b;
     let a;
 
@@ -50,6 +52,9 @@ logo.addEventListener("click", () => {
     prod.style.display="";
     document.body.style.backgroundColor="green"
     }
+    czat.addEventListener("click", () => {
+       window.open("https://docs.google.com/document/d/13wOvqa1HGPS4Tw7p7Gtks11qwlDZuC8aQMqZJbMDqsQ/edit", "_blank")
+    });
 });
     jakat.addEventListener("click", () => {
     alert("temat 1 matzoo " +
