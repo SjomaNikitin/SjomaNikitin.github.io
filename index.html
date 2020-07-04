@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>good page</title>
+    <title>dostawa.pl</title>
 </head>
 <body>
-<p><a href="https://github.com/SjomaNikitin/SjomaNikitin.github.io/issues/" target="_blank">Napisz do mnie</a>
-    v1.1.1 autor: Sjoma Nikitin</p>
-<p><a href="ZDANIAklasy.html" target="_blank">ZADANIA klasy</a></p>
+<div style="font-size: 50px">dostawa.pl</div>
+<button style="width: 600px; font-size: 80px; height: 100px" id="wyslyj">wyślij</button>
 <script>
+    const wyslyj = document.getElementById("wyslyj");
+    wyslyj.addEventListener("click", () => {
+        window.open("https://docs.google.com/forms/d/e/1FAIpQLSeRRw3qK6Q0UpAYyybY86dDqoJ0VxixUlVTpoMdw9pR6bq6Vw/viewform", "_blank")
+    })
 </script>
 </body>
 </html>
